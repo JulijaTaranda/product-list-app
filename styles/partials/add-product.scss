@@ -1,0 +1,53 @@
+@import 'globals.scss';
+
+.add-product-page {
+  @extend .container;
+}
+
+.product-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.dynamic-fields {
+  display: flex;
+  flex-direction: column;
+  gap: $gap;
+}
+
+.form-group {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+label {
+  width: 200px;
+  align-items: center;
+  display: flex;
+  justify-content: end;
+  padding-top: 10px;
+}
+
+input {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+    
+input {
+  @include input-select-styles(500px); // Applying styles with a specific width
+}
+
+select {
+  @include input-select-styles(200px); // Applying styles with a specific width
+}
+
+.type-description {
+  color: rgb(187, 184, 184);
+  font-size: 0.9rem;
+}
+
+
+  

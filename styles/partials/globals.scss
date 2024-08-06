@@ -1,0 +1,86 @@
+// Variables
+$primary-color: #007bff;
+$danger-color: #dc3545;
+$hover-primary-color: #0056b3;
+$hover-danger-color: #c82333;
+$border-radius: 8px; 
+$button-padding: 15px;
+$box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); 
+$border-color: #ddd;
+$padding: 20px;
+$gap: 20px;
+$product-item-height: 220px;
+
+// Mixins
+@mixin button-styles($bg-color, $hover-color) {
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+  padding: $button-padding;
+  border: none;
+  color: white;
+  cursor: pointer;
+  background-color: $bg-color;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  &:hover {
+    background-color: $hover-color;
+  }
+}
+
+@mixin input-select-styles($width) {
+  padding: 10px;
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+  width: $width;
+}
+
+// General styles
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+// Main container
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 0 120px;
+  min-height: 100vh;
+}
+
+// Header
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 70px 0;
+  padding: $padding;
+  border-bottom: 2px solid $border-color;
+}
+
+h1 {
+  margin: 0;
+}
+
+.header-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-primary {
+   @include button-styles($primary-color, $hover-primary-color);
+}
+
+.btn-danger {
+      @include button-styles($danger-color, $hover-danger-color);
+    }
+  
+// Footer
+.footer {
+  padding: 10px;
+  border-top: 2px solid $border-color;
+  text-align: center;
+  font-size: 0.8rem;
+  margin-top: auto;
+}

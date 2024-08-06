@@ -1,0 +1,31 @@
+.homepage {
+  @extend .container;
+}
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: $gap;    
+  padding: $padding;
+}
+  
+.product-item {
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+  background-color: #fff;    
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  height: $product-item-height;
+  box-sizing: border-box;
+  position: relative;
+  padding: 10px;
+}
+
+.delete-checkbox {
+  width:20px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+  
